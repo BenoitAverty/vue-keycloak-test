@@ -1,3 +1,8 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  devServer: {
+    proxy: {
+      "/auth": { target: "http://localhost:8000" }
+    }
+  }
 };
